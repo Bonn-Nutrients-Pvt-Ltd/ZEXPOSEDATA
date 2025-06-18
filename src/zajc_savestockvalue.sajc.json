@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Save Current Stock",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_SAVESTOCKVALUE"
+  },
+  "parameters": [
+    {
+      "name": "S_ID"
+    },
+    {
+      "name": "P_DESCR"
+    },
+    {
+      "name": "P_COUNT"
+    },
+    {
+      "name": "P_SIMUL"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Application Job For Saving Current Stock Value",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZAJC_SAVESTOCKVALUE"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_COUNT",
+        "value": "200"
+      },
+      {
+        "name": "P_DESCR",
+        "value": "My Default Description"
+      },
+      {
+        "name": "P_SIMUL",
+        "value": ""
+      }
+    ],
+    "valueRangesParameters": [
+      {
+        "name": "S_ID",
+        "valueRanges": [
+          {
+            "sign": "include",
+            "option": "equals",
+            "low": "4711"
+          }
+        ]
+      }
+    ]
+  }
+}

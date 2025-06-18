@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service Binding for Exposed Data'
+define service ZSB_EXPOSE {
+  expose ZC_Product                as Product;
+  expose ZC_BUSPART                as Customer;
+  expose zdd_dealer_master_new     as Dealer;
+  expose ZI_ProductionConfirmation as Production;
+  expose ZC_CURRENTSTOCK           as ProductStock;
+  expose ZC_BillingDocTP           as BillingDoc;
+  expose ZC_BillingLinesTP         as BillingLines;
+}

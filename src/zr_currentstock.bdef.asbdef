@@ -1,0 +1,53 @@
+managed implementation in class ZBP_R_CURRENTSTOCK unique;
+strict ( 2 );
+define behavior for ZR_CURRENTSTOCK alias ZrCurrentstock
+persistent table ZCURRENTSTOCK
+etag master LocalLastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Plant,
+   StorageLocation,
+   Batch,
+   InsertedDate,
+   InsertedTime,
+   Product;
+
+
+  create;
+  update;
+  delete;
+
+
+  mapping for ZCURRENTSTOCK
+  {
+    Plant = plant;
+    StorageLocation = storage_location;
+    Batch = batch;
+    Product = product;
+    ProductType = product_type;
+    ProductName = product_name;
+    MaterialBaseUnit = material_base_unit;
+    MatlWrhsStkQtyInMatlBaseUnit = matlwrhsstkqtyinmatlbaseunit;
+    UnpostedInvStock = unposted_stock_inv_value;
+    UnpostedUnsoldStock = unposted_stock_unsold_value;
+    PostedStock = posted_stock_value;
+    ProductionStock = production_stock_value;
+    InsertedDate = inserted_date;
+    InsertedTime = inserted_time;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}
